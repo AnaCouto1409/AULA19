@@ -1,0 +1,128 @@
+* {
+    margin: 0;
+    border: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    background-color: rgba(0, 0, 0, 0.9);
+    font-family: sans-serif;
+    color: white;
+  }
+  
+  /* container flex */
+  header {
+    height: 25vh;
+    background-color: black;
+    /* a difícil missão centralizar horizontal e verticalmente */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  nav {
+    background-color: aliceblue;
+  }
+  
+  
+  nav ul {
+    list-style-type: none;
+    /*vai virar um flexbox*/
+    display: inline;
+    display: inline-block;
+    /* podemos justificar o conteúdo */
+    /* justify-content: space-evenly; */
+  }
+  
+  .link-especial {
+    margin-left: auto;
+  }
+  
+  li a {
+    text-decoration: none;
+    color: black;
+    text-align: center;
+    display: block; 
+    padding: 14px 16px;
+  }
+  
+  li a:hover {
+    background-color: darkgrey;
+    font-weight: 700;
+  }
+  
+  main {
+    max-width: 70%;
+    margin: 5vh auto;
+  }
+  
+  /* um container flex vertical */
+  .card {
+    width: 30%;
+    height: 40vh;
+    padding: 5px;
+    margin: 10px 10px 10px 10px;
+    background-color: aliceblue;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  /* um item flex do card */
+  .card-content {
+    background-color: darkgray;
+    padding: 5px;
+    /* o conceito de espaço disponível */
+    flex-grow: 2; /* configura o item para crescer e ocupar o espaço disponível */
+  }
+  /* o outro um item flex do card */
+  .card-footer {
+    margin: 5px 0;
+    font-weight: 700;
+  }
+  
+  
+  .flex-container {
+    display: flex;
+    justify-content: space-around;
+    border: 1rem solid #7e459b;
+    gap: 20px 40px;
+    flex-wrap: wrap;
+    row-gap: 30px;
+  }
+  
+  .item {
+    height: 300px;
+    background-color: aliceblue;
+    color: black;
+    font-weight: 700;
+    text-align: center;
+    border: 1px black solid;
+    border-radius: 5px;
+  
+    /* um item flex também pode ser configurado como container flex*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+    /* configurações do item flex - filha da classe flex-container */
+    /* tamanho base */
+    /* flex-basis: 250px; */
+    /* flex-shrink: 1; */
+    /* abreviação flex: grow shrink basis*/
+    flex: 0 0 200px;
+    flex-basis: 200px;
+    flex-grow: 1;
+  }
+  
+  .item cresce-mais {
+    flex-grow: 2;
+  }
+  
+  .item encolhe-mais {
+    flex-shrink: 2; 
+  }
+  
